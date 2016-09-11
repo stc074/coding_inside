@@ -1,0 +1,21 @@
+/* 
+    Document   : admin
+    Created on : 6 sept. 2013, 16:10:40
+    Author     : pj
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+.clear-both {
+    clear: both;
+}
+
+div#content {
+    font-family: Arial, serif;
+    font-size: 0.9em;
+}
+

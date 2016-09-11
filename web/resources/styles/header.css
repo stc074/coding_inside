@@ -1,0 +1,70 @@
+/* 
+    Document   : header
+    Created on : 18 août 2013, 16:38:16
+    Author     : pj
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+@font-face {
+    font-family: 'headerFont';
+    src: url('header.ttf.xhtml?ln=fonts');
+}
+div#header {
+    background-color: #44526F;
+}
+#logo {
+    font-family: headerFont, sans-serif;
+	width: 60%;
+	margin: 0 auto;
+	text-transform: uppercase;
+}
+
+#logo h1 {
+	letter-spacing: 0.1em;
+	font-size: 2em;
+	color: #ffffff;
+        font-weight: lighter;
+}
+
+#logo p {
+    font-weight: lighter;
+    font-size: 0.9em;
+	letter-spacing: 0.1em;
+	color: #cccccc;
+}
+
+#logo a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    #logo {
+        width: 80%;
+    }
+#logo h1 {
+	font-size: 0.9em;
+}
+
+#logo p {
+    font-size: 0.6em;
+}
+
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+    #logo {
+        width: 80%;
+    }
+#logo h1 {
+	font-size: 1.2em;
+}
+
+#logo p {
+    font-size: 0.7em;
+}
+
+}

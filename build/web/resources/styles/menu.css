@@ -1,0 +1,82 @@
+/* 
+    Document   : menu
+    Created on : 16 août 2013, 18:46:01
+    Author     : pj
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+div#menu-wrapper {
+	background: #5E7199;
+}
+
+div#nav {
+    background: #5E7199;
+    overflow: hidden;
+    height: 80px;
+}
+
+div#nav ul {
+	margin: 0;
+	padding: 20px 0px 0px 0px;
+	list-style: none;
+	text-align: center;
+}
+
+div#nav li {
+	display: inline-block;
+}
+
+div#nav a {
+	display: block;
+	letter-spacing: 1px;
+	padding: 0 30px;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 60px;
+	font-size: 0.8em;
+	font-weight: bold;
+	border: none;
+	color: #ffffff;
+}
+
+div#nav a:hover, div#nav .current a {
+	text-decoration: none;
+}
+
+div#nav .current a {
+	border-radius: 5px 5px 0px 0px;
+        box-shadow: -10px -10px 10px #303A4F;
+	background: #44526F;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    
+div#nav {
+    height: 30px;
+}
+
+div#nav ul {
+	padding: 5px 0px 0px 0px;
+}
+
+div#nav li {
+	display: inline-block;
+}
+
+div#nav a {
+	letter-spacing: 1px;
+	padding: 0 5px;
+	line-height: 25px;
+        /*font-family: Arial, serif;*/
+	font-size: 0.4em;
+}
+
+
+div#nav .current a {
+	border-radius: 3px 3px 0px 0px;
+        box-shadow: -3px -3px 3px #303A4F;
+}
+
+}

@@ -1,0 +1,44 @@
+/* 
+    Document   : forms
+    Created on : 30 août 2013, 15:18:56
+    Author     : pj
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+h2 {
+    color: #7866c6;
+    font-size: 1.3em;
+}
+form {
+    font-size: 0.9em;
+}
+
+input, textarea {
+    border: solid 1px #000000;
+    border-radius: 3px;
+    font-family: Arial, serif;
+    font-size: 0.9em;
+    color: #000000;
+}
+
+input[type='submit'] {
+    cursor: pointer;
+    padding: 5px 5px;
+}
+
+input[type='submit']:hover {
+    color: #f89b4a;
+}
+.red {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+div.asterisk {
+    background-image: url("asterisk_orange.png.xhtml?ln=images");
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}

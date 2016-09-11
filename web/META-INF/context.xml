@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/CodingInside">
+  <Resource auth="Container" driverClassName="org.postgresql.Driver" maxActive="200" maxIdle="200" maxWait="10" name="jdbc/postgres" password="8p3xdv1z" type="javax.sql.DataSource" url="jdbc:postgresql://127.0.0.1:5432/px643z53" username="bachibouzouk"/>
+  <Realm className="org.apache.catalina.realm.DataSourceRealm" dataSourceName="jdbc/postgres" digest="md5" localDataSource="true" roleNameCol="role_name" userCredCol="user_pass" userNameCol="user_name" userRoleTable="user_roles" userTable="table_users"/>
+</Context>

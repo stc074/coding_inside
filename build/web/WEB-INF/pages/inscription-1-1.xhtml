@@ -1,0 +1,138 @@
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <div id="content">
+        <h1>Inscription</h1>
+        <p>Avant de déposer votre projet, veuillez remplir le formulaire ci-dessous afin de personnaliser votre compte</p>
+        <div class="p"><div class="asterisk"></div> : Champs obligatoires.</div>
+        <p><br/></p>
+        <c:choose>
+            <c:when test="#{registerProjectManagedBean.test==1}">
+                <!-- test==1 -->
+            </c:when>
+            <c:when test="#{registerProjectManagedBean.test==2}">
+                <div class="error">
+                    <p>Erreur interne :</p>
+                    <p><h:outputText value="#{registerProjectManagedBean.errorMsg}" /></p>
+                </div>
+            </c:when>
+        </c:choose>
+        <h:form id="form">
+            <div class="table">
+                <div class="row">
+                    <div class="cell">
+                        <h:outputLabel for="nickname">Choisissez un pseudonyme :</h:outputLabel>
+                    </div>
+                    <div class="cell">
+                        <h:inputText id="nickname" value="#{registerProjectManagedBean.nickname}" required="true" requiredMessage="Champ vide" size="15" maxlength="100">
+                            <f:validator validatorId="registerNicknameValidator" />
+                        </h:inputText>
+                        <div class="asterisk"></div>
+                    </div>
+                    <div class="cell">
+                        <h:message for="nickname" class="red" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <h:outputLabel for="password">Choisissez un mot de passe :</h:outputLabel>
+                    </div>
+                    <div class="cell">
+                        <h:inputSecret id="password" value="#{registerProjectManagedBean.pass}" required="true" requiredMessage="Champ vide" size="15" maxlength="15">
+                            <f:validator validatorId="registerPasswordValidator" />
+                        </h:inputSecret>
+                        <div class="asterisk"></div>
+                    </div>
+                    <div class="cell">
+                        <h:message for="password" class="red" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <h:outputLabel for="password2">Confirmez ce mot de passe :</h:outputLabel>
+                    </div>
+                    <div class="cell">
+                        <h:inputSecret id="password2" value="#{registerProjectManagedBean.confirmPass}" required="true" requiredMessage="Champ vide" size="15" maxlength="15">
+                            <f:validator validatorId="registerPasswordValidator" />
+                        </h:inputSecret>
+                        <div class="asterisk"></div>
+                    </div>
+                    <div class="cell">
+                        <h:message for="password2" class="red" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <h:outputLabel for="address-mail">Votre adresse mail :</h:outputLabel>
+                    </div>
+                    <div class="cell">
+                        <h:inputText id="address-mail" value="#{registerProjectManagedBean.mailAddress}" required="true" requiredMessage="Champ vide" size="30" maxlength="100">
+                            <f:validator validatorId="registerMailValidator" />
+                        </h:inputText>
+                        <div class="asterisk"></div>
+                    </div>
+                    <div class="cell">
+                        <h:message for="address-mail" class="red" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <h:outputLabel for="lastname">Votre nom :</h:outputLabel>
+                    </div>
+                    <div class="cell">
+                        <h:inputText id="lastname" value="#{registerProjectManagedBean.lastname}" required="false" size="20" maxlength="100">
+                            <f:validator validatorId="registerProjNameValidator" />
+                        </h:inputText>
+                    </div>
+                    <div class="cell">
+                        <h:message for="lastname" class="red" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <h:outputLabel for="firstname">Votre prénom :</h:outputLabel>
+                    </div>
+                    <div class="cell">
+                        <h:inputText id="firstname" value="#{registerProjectManagedBean.firstname}" required="false" size="20" maxlength="100">
+                            <f:validator validatorId="registerProjNameValidator" />
+                        </h:inputText>
+                    </div>
+                    <div class="cell">
+                        <h:message for="firstname" class="red" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <h:outputLabel for="phone">N° de téléphone :</h:outputLabel>
+                    </div>
+                    <div class="cell">
+                        <h:inputText id="phone" value="#{registerProjectManagedBean.phone}" required="false" size="14" maxlength="14">
+                            <f:validator validatorId="registerProjPhoneValidator" />
+                        </h:inputText>
+                    </div>
+                    <div class="cell">
+                        <h:message for="phone" class="red" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <h:outputLabel for="siren">N° de Siren :</h:outputLabel>
+                    </div>
+                    <div class="cell">
+                        <h:inputText id="siren" value="#{registerProjectManagedBean.sirenNumber}" required="false" size="9" maxlength="9">
+                            <f:validator validatorId="registerProjSirenValidator" />
+                        </h:inputText>
+                    </div>
+                    <div class="cell">
+                        <h:message for="siren" class="red" />
+                    </div>
+                </div>
+                <div class="row">
+                    <h:commandButton value="Valider" action="#{registerProjectManagedBean.validate()}" />
+                </div>
+            </div>
+        </h:form>
+    </div>
+</ui:composition>

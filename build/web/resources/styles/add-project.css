@@ -1,0 +1,35 @@
+/* 
+    Document   : add-project.css
+    Created on : 30 août 2013, 15:01:57
+    Author     : pj
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+div.pro-forms {
+    width: max-content;
+    text-align: center;
+}
+
+div.pro-form {
+    width: 40%;
+    height: 200px;
+    margin: 10px 10px 10px 10px;
+    background-color: #eeeeee;
+    border: solid 1px #000033;
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+div.table {
+    width: 100%;
+}
+
+div.row {
+    width: 100%;
+}
+
+div.cell {
+    width: 30%;
+}

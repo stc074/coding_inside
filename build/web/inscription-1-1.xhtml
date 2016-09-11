@@ -1,0 +1,13 @@
+<ui:composition template="/WEB-INF/pages/template.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <ui:define name="title">Porteurs de projets : Inscrivez vous gratuitement !</ui:define>
+    <ui:define name="additional-style">
+        <h:outputStylesheet library="styles" name="add-project.css" />            
+        <h:outputStylesheet library="styles" name="forms.css" />            
+    </ui:define>
+    <ui:define name="content">
+        <ui:include src="/WEB-INF/pages/inscription-1-1.xhtml" />
+    </ui:define>
+</ui:composition>

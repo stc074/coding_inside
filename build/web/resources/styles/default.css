@@ -1,0 +1,41 @@
+/* 
+    Document   : default
+    Created on : 16 août 2013, 19:00:14
+    Author     : pj
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+body {
+    background-color: #44526F;
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, serif;
+	font-size: 1em;
+	font-weight: lighter;
+	color: #363636;
+}
+
+.container {
+    width: 80%;
+    margin: 0px auto;
+}
+
+div#wrapper {
+    background-color: #5E7199;
+}
+
+div.table {
+    display: table;
+}
+
+div.row {
+    display: table-row;
+}
+
+div.cell {
+    display: table-cell;
+}

@@ -1,0 +1,60 @@
+/* 
+    Document   : content
+    Created on : 28 août 2013, 17:53:19
+    Author     : pj
+    Description:
+        Purpose of the stylesheet follows.
+*/
+div#content-screen {
+    background-color: #5E7199;
+}
+
+#content {
+    min-height: 300px;
+    margin: auto auto;
+    background-color: #cccccc;
+    border: solid 1px #333333;
+    border-radius: 5px;
+    width: 80%;
+    padding: 10px;
+}
+
+#content h1 {
+    font-size: 1.2em;
+}
+
+#content p, #content div.p {
+    font-size: 0.9em;
+}
+
+#content a {
+    text-decoration: none;
+    color: #f89b4a;
+}
+
+#content a:hover {
+    text-decoration: underline;
+}
+
+div#content div.error {
+    padding: 10px;
+    border: solid 1px #cc0000;
+    border-radius: 5px;
+    background-color: #e9caca;
+}
+
+div#introduction {
+    background-color: #5E7199;    
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+#content {
+    min-height: 120px;
+}
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+#content {
+    min-height: 80px;
+}
+}

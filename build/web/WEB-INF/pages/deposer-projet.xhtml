@@ -1,0 +1,50 @@
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+        <div id="content">
+            <h1>Déposez un projet</h1>
+            <p>Déposez gratuitement votre projet sur coding-inside.com</p>
+            <div class="pro-forms">
+                <div class="pro-form">
+                    <h2>Je possède déja un compte</h2>
+                    <h:form>
+                        <div class="table">
+                            <div class="row">
+                                <div class="cell">
+                                    <h:outputLabel for="nickname">Votre pseudo : </h:outputLabel>
+                                </div>
+                                <div class="cell">
+                                    <h:inputText id="nickname" value="#{loginManagedBean.nickname}" required="true" requiredMessage="Champ vide" size="15" maxlength="100">
+                                        <f:validator validatorId="validators.NicknameValidator" />
+                                    </h:inputText>
+                                </div>
+                                <div class="cell">
+                                    <h:message for="nickname" class="red" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="cell">
+                                    <h:outputLabel for="password">Mot de passe : </h:outputLabel>
+                                </div>
+                                <div class="cell">
+                                    <h:inputText id="password" value="#{loginManagedBean.pass}" required="true" requiredMessage="Champ vide" size="15" maxlength="15">
+                                        <f:validator validatorId="validators.PasswordValidator" />
+                                    </h:inputText>
+                                </div>
+                                <div class="cell">
+                                    <h:message for="password" class="red" />
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                        <h:commandButton value="Valider" action="#{loginManagedBean.validate()}" />
+                    </h:form>
+                </div>
+                <div class="pro-form">
+                    <h2>Je ne possède pas de compte</h2>
+                    <div><h:outputLink value="inscription-1-1.html"><h:outputText value="Je m'inscris (Gratuitement) (Cliquez)"></h:outputText></h:outputLink></div>
+                </div>
+            </div>
+        </div>
+</ui:composition>
